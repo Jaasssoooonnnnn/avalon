@@ -1,0 +1,7 @@
+{
+  "name": "@avalon/prompts",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Prompt templates (prose/guidance) for Avalon player models. Dynamic game state is injected by the server's prompt builder.",
+  "type": "module"
+}

@@ -1,0 +1,30 @@
+{
+  "name": "avalon-ai-arena",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Web-based Avalon (The Resistance) simulation where 7 AI models play autonomously while a human spectates, configures, and inspects hidden state.",
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "dev": "concurrently -n server,web -c blue,magenta \"npm:dev:server\" \"npm:dev:web\"",
+    "dev:server": "npm -w @avalon/server run dev",
+    "dev:web": "npm -w @avalon/web run dev",
+    "build": "npm -w @avalon/web run build",
+    "start": "npm -w @avalon/server run start",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "npm -w @avalon/server run typecheck && npm -w @avalon/web run typecheck"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "concurrently": "^9.1.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2",
+    "vitest": "^2.1.8"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
